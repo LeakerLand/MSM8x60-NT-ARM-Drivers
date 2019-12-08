@@ -50,14 +50,14 @@ Reboot
 Addreg = BMACL
 
 [BMACL]
-HKR, , Security, , "D:P(A;;GA;;;BA)(A;;GA;;;SY)" ;built in admin and local sys access
+HKR, , Security, ,  "D:P(A;;GA;;;BA)(A;;GA;;;SY)" ;built in admin and local sys access
 
 
 [BATTMNGRCopyFiles]
 qcbattmngr8960.sys
 
 [WDTFSOCDeviceCategory]
-{5D078032-6378-437B-8DA5-9B32B7CA3FDD}, 2, 7, , 0
+{5D078032-6378-437B-8DA5-9B32B7CA3FDD}, 2, 7, ,  0
 
 [BATTMNGR_Inst.NT.Services]
 AddService = qcbattmngr,%SPSVCINST_ASSOCSERVICE%,BATTMNGR_Service_Inst
@@ -81,6 +81,7 @@ SPSVCINST_ASSOCSERVICE = 0x00000002
 SERVICE_KERNEL_DRIVER  = 1
 SERVICE_DEMAND_START   = 3
 SERVICE_ERROR_NORMAL   = 1
+
 
 
 
