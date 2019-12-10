@@ -1,0 +1,49 @@
+;
+; Maximus.inf
+;
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = "Nokia"
+DriverVer   = 12/18/2014,18.34.39.0509
+CatalogFile = maximus.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+0 = %diskIns%
+
+[SourceDisksFiles]
+maximus.sys = 0
+
+[Manufacturer]
+%company% = Standard, NTARM
+
+[Standard.NTARM]
+%devicedesc% = Maximus_Inst.NT,     ACPI\MAXIMUS
+
+[maximus_inst.nt]
+CopyFiles = maximus_inst_copy_files
+
+[maximus_inst_copy_files]
+maximus.sys
+
+[Maximus_Inst.NT.Services]
+AddService = Maximus, 0x00000002, Maximus_service_inst
+
+[Maximus_service_inst]
+DisplayName    = %Maximus.SvcDesc%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\maximus.sys 
+LoadOrderGroup = Extended Base
+
+[Strings]
+devicedesc      = "Nokia Maximus Device"
+company         = "Nokia"
+Maximus.SvcDesc = "Nokia Maximus Driver"
+diskIns         = "Nokia Maximus Installation Disk"
+
