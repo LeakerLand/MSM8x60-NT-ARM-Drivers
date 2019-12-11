@@ -5,7 +5,7 @@
 Signature       =   "$WINDOWS NT$"
 Class           =   Sensor
 ClassGuid       =   {5175d334-c371-4806-b3ba-71fd53c9258d}
-Provider        =   "LumiaWoA authors"
+Provider        =   %IHV%
 DriverVer       =   12/07/2011,1.0.0.0000
 CatalogFile     =   fusion.cat
 
@@ -23,7 +23,7 @@ wpabsvc.dll      = 0
 orientsrv.dll    = 0
 
 [Manufacturer]
-%StdMfg% = Standard, NTARM
+%IHV% = Standard, NTARM
 
 [Standard.NTARM]
 %fusion_devdesc%      =   Fusion_Inst.NT,     Root\Fusion
@@ -45,6 +45,11 @@ HKLM, "SYSTEM\ControlSet001\Services\SensorsClx0101", "Group", 0x0, "System"
 HKLM, "SYSTEM\ControlSet001\Services\SensorsClx0101", "ImagePath", 0x0, "system32\drivers\wpsensorsclx.sys"
 HKLM, "SYSTEM\ControlSet001\Services\SensorsClx0101", "Start", 0x10001, 0x1
 HKLM, "SYSTEM\ControlSet001\Services\SensorsClx0101", "Type", 0x10001, 0x1
+
+HKLM, "SYSTEM\ControlSet001\services\SensorsClx0101", "WPSECURITY", 0x1,\
+	  01,00,04,80,c8,00,00,00,d4,00,00,00,00,00,00,00,14,00,00,00,02,00,b4,00,05,00,00,00,00,00,38,00,00,00,00,80,01,0a,00,00,00,00,00,0f,03,00,00,00,00,04,00,00,d1,14,54,35,b9,ed,d8,6e,c7,85,10,38,ea,39,40,94,92,40,63,79,1d,0f,38,\
+	  f1,46,e6,3d,bb,1a,a3,5d,6c,00,00,24,00,00,00,00,80,01,05,00,00,00,00,00,05,15,00,00,00,d1,a7,1a,a1,53,9e,65,2f,4b,7f,77,1a,06,04,00,00,00,00,24,00,00,00,00,80,01,05,00,00,00,00,00,05,15,00,00,00,d1,a7,1a,a1,53,9e,65,2f,4b,7f,\
+	  77,1a,b2,05,00,00,00,00,14,00,ff,ff,1f,11,01,01,00,00,00,00,00,05,12,00,00,00,00,00,18,00,ff,ff,1f,11,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00,01,01,00,00,00,00,00,05,12,00,00,00,01,01,00,00,00,00,00,05,12,00,00,00
 
 HKLM, "Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{CF441505-1E7D-4907-8E5D-A5240CA18DB6}", "Enabled", 0x10001, 0x1
 HKLM, "Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{CF441505-1E7D-4907-8E5D-A5240CA18DB6}", "MessageFileName", 0x0, "C:\windows\System32\drivers\wpsensorsclx.sys"
@@ -211,5 +216,6 @@ ErrorControl    =   1
 ServiceBinary   =   %12%\fusdcmpi.sys 
 
 [Strings]
-fusion_devdesc="Sensor Fusion Client Driver"
-diskIns="Sensor Fusion Client Installation Disk"
+IHV            = "LumiaWoA authors"
+fusion_devdesc = "Sensor Fusion Client Driver"
+diskIns        = "Sensor Fusion Client Installation Disk"
