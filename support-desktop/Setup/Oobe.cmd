@@ -3,7 +3,7 @@
 REM Second boot drivers
 \Windows\OEM\devcon.exe update \Windows\OEM\Drivers\ChargeArbitration.inf Root\CAD
 
-call :installRootDevice fusionv2.inf umdf2\FusionV2 ROOT\FusionV2\0000
+call :installRootDevice fusion.inf Root\Fusion ROOT\Fusion\0000
 
 REM MBB
 powershell -command "[System.Environment]::OSVersion.Version.Build" > psout.txt
