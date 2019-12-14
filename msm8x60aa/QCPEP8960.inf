@@ -10,7 +10,7 @@ Class       = System
 ClassGuid   = {4D36E97D-E325-11CE-BFC1-08002BE10318}
 Provider    = %QC%
 RefVersion  = 09/16/2011,1.00.0000
-DriverVer   = 09/26/2013,1.0.3051.0000
+DriverVer   = 08/28/2012,1.0.1232.1501
 CatalogFile = qcpep8960.cat
 PnpLockDown = 1
 
@@ -52,18 +52,50 @@ Reboot
 Addreg = PEPACL
 
 [PEPACL]
-HKR, , Security, , "D:P(A;;GA;;;BA)(A;;GA;;;SY)"
+HKR, , Security, ,  "D:P(A;;GA;;;BA)(A;;GA;;;SY)"
 
 [PEP_SoftwareDeviceSettings]
-HKR , , EnableMiniPEP     , 0x00010001,  1
-HKR , , SystemLatencyFlags, 0x00010001,  0
+HKR , Parameters                            , EnableMiniPEP         , 0x00010001,   1
+HKR , Parameters                            , SystemLatencyFlags    , 0x00010001,   0
+
+HKR, PowerSettings\v1\Audio\Default        , PlatformIdleStateIndex, 0x00010001, 0x00000001
+
+HKR, PowerSettings\v1\FSVP\Default         , perfdecthreshold      , 0x00010001, 0x00000032
+HKR, PowerSettings\v1\FSVP\Default         , cpmaxcores            , 0x00010001, 0x00000064
+HKR, PowerSettings\v1\FSVP\Default         , perfdectime           , 0x00010001, 0x00000001
+HKR, PowerSettings\v1\FSVP\Default         , cpconcurrency         , 0x00010001, 0x00000050
+HKR, PowerSettings\v1\FSVP\Default         , perfincthreshold      , 0x00010001, 0x0000005A
+HKR, PowerSettings\v1\FSVP\Default         , cpheadroom            , 0x00010001, 0x0000005A
+HKR, PowerSettings\v1\FSVP\Default         , cpmincores            , 0x00010001, 0x0000000A
+HKR, PowerSettings\v1\FSVP\Default         , distributeutil        , 0x00010001, 0x00000000
+HKR, PowerSettings\v1\FSVP\Default         , perfinctime           , 0x00010001, 0x00000003
+HKR, PowerSettings\v1\FSVP\Default         , perfcheck             , 0x00010001, 0x0000001E
+HKR, PowerSettings\v1\FSVP\Default         , procthrottlemax       , 0x00010001, 0x00000064
+HKR, PowerSettings\v1\FSVP\Default         , cpincreasetime        , 0x00010001, 0x00000003
+HKR, PowerSettings\v1\FSVP\Default         , procthrottlemin       , 0x00010001, 0x00000019
+HKR, PowerSettings\v1\FSVP\Default         , cpdecreasetime        , 0x00010001, 0x00000001
+
+HKR, PowerSettings\v1\VideoBatching\Default, perfdecthreshold      , 0x00010001, 0x00000032
+HKR, PowerSettings\v1\VideoBatching\Default, cpmaxcores            , 0x00010001, 0x00000064
+HKR, PowerSettings\v1\VideoBatching\Default, perfdectime           , 0x00010001, 0x00000001
+HKR, PowerSettings\v1\VideoBatching\Default, cpconcurrency         , 0x00010001, 0x00000050
+HKR, PowerSettings\v1\VideoBatching\Default, perfincthreshold      , 0x00010001, 0x0000005A
+HKR, PowerSettings\v1\VideoBatching\Default, cpheadroom            , 0x00010001, 0x0000005A
+HKR, PowerSettings\v1\VideoBatching\Default, cpmincores            , 0x00010001, 0x0000000A
+HKR, PowerSettings\v1\VideoBatching\Default, distributeutil        , 0x00010001, 0x00000000
+HKR, PowerSettings\v1\VideoBatching\Default, perfinctime           , 0x00010001, 0x00000003
+HKR, PowerSettings\v1\VideoBatching\Default, perfcheck             , 0x00010001, 0x0000001E
+HKR, PowerSettings\v1\VideoBatching\Default, procthrottlemax       , 0x00010001, 0x00000064
+HKR, PowerSettings\v1\VideoBatching\Default, cpincreasetime        , 0x00010001, 0x00000003
+HKR, PowerSettings\v1\VideoBatching\Default, procthrottlemin       , 0x00010001, 0x00000019
+HKR, PowerSettings\v1\VideoBatching\Default, cpdecreasetime        , 0x00010001, 0x00000001
 
 [Pep_Device.NT.Copy]
 qcpep8960.sys
 
 ; WHCK test
 [WDTFSOCDeviceCategory]
-{5D078032-6378-437B-8DA5-9B32B7CA3FDD}, 2, 7, , 2
+{5D078032-6378-437B-8DA5-9B32B7CA3FDD}, 2, 7, ,  2
 
 ;-------------- Service installation
 
@@ -102,4 +134,5 @@ BTMDevice.DeviceDesc   = "Qualcomm System Temperature Sensor Device"
 
 ;Non-localizable Strings
 SPSVCINST_ASSOCSERVICE = 0x00000002
+
 

@@ -65,7 +65,52 @@ HKR, , "EnhancedPowerManagementEnabled"   , %REG_DWORD%,   0
 HKR, , "EnhancedPowerManagementUseMonitor", %REG_DWORD%,   0
 
 [Configuration.NT.HW.AddReg]
-
+HKR, "%Configuration%", "AbsPosFilt", 0x10001, 0x1
+HKR, "%Configuration%", "Acceleration", 0x10001, 0x0
+HKR, "%Configuration%", "AlgorithmSelection", 0x10001, 0x1
+HKR, "%Configuration%", "Configured", 0x10001, 0x1
+HKR, "%Configuration%", "DeltaXPosThreshold", 0x10001, 0x4
+HKR, "%Configuration%", "DeltaYPosThreshold", 0x10001, 0x4
+HKR, "%Configuration%", "DozeHoldoff", 0x10001, 0x5
+HKR, "%Configuration%", "DozeInterval", 0x10001, 0x3
+HKR, "%Configuration%", "DozeThreshold", 0x10001, 0x1E
+HKR, "%Configuration%", "Dribble", 0x10001, 0x0
+HKR, "%Configuration%", "FingerWidthX", 0x10001, 0xEA4F
+HKR, "%Configuration%", "FingerWidthY", 0x10001, 0xDF6C
+HKR, "%Configuration%", "InterruptEnable", 0x10001, 0xF
+HKR, "%Configuration%", "LargeZScaleFactor", 0x10001, 0x51E
+HKR, "%Configuration%", "ManTrackedFinger", 0x10001, 0x0
+HKR, "%Configuration%", "ManTrackEn", 0x10001, 0x0
+HKR, "%Configuration%", "MaxFingerMovement", 0x10001, 0x4
+HKR, "%Configuration%", "MinFingerSeparation", 0x10001, 0xA
+HKR, "%Configuration%", "MotionSensitivity", 0x10001, 0x0
+HKR, "%Configuration%", "NoSleep", 0x10001, 0x1
+HKR, "%Configuration%", "PalmDetectThreshold", 0x10001, 0xB
+HKR, "%Configuration%", "PepRemovesVoltageInD3", 0x10001, 0x0
+HKR, "%Configuration%", "RelBallistics", 0x10001, 0x0
+HKR, "%Configuration%", "RelPosFilt", 0x10001, 0x0
+HKR, "%Configuration%", "ReportingMode", 0x10001, 0x1
+HKR, "%Configuration%", "ReportMeasuredSize", 0x10001, 0x0
+HKR, "%Configuration%", "ReportRate", 0x10001, 0x0
+HKR, "%Configuration%", "SegmentationSensitivity", 0x10001, 0x70
+HKR, "%Configuration%", "SensorMaxXPos", 0x10001, 0x330
+HKR, "%Configuration%", "SensorMaxYPos", 0x10001, 0x572
+HKR, "%Configuration%", "SleepMode", 0x10001, 0x0
+HKR, "%Configuration%", "SmallZScaleFactor", 0x10001, 0x28F5
+HKR, "%Configuration%", "SmallZThreshold", 0x10001, 0x28
+HKR, "%Configuration%", "Velocity", 0x10001, 0x0
+HKR, "%Configuration%", "WxOffset", 0x10001, 0x0
+HKR, "%Configuration%", "WxScaleFactor", 0x10001, 0x30
+HKR, "%Configuration%", "WyOffset", 0x10001, 0x0
+HKR, "%Configuration%", "WyScaleFactor", 0x10001, 0x30
+HKR, "%Configuration%", "XClipHi", 0x10001, 0x0
+HKR, "%Configuration%", "XClipLo", 0x10001, 0x0
+HKR, "%Configuration%", "XPitch", 0x10001, 0x4800
+HKR, "%Configuration%", "YClipHi", 0x10001, 0x0
+HKR, "%Configuration%", "YClipLo", 0x10001, 0x0
+HKR, "%Configuration%", "YPitch", 0x10001, 0x4800
+HKR, "%Configuration%", "ZHysteresis", 0x10001, 0x5
+HKR, "%Configuration%", "ZTouchThreshold", 0x10001, 0x1E
 
 [Resolutions.NT.HW.AddReg]
 HKLM, "%ScreenProps%", "DisplayLetterBoxHeightBottom", 0x10001, 0x0
@@ -105,7 +150,7 @@ TchDriver_Service_Desc = "Synaptics RMI4 F12 Alpha Digitizer Driver Service"
 HIDKMDF_Service        = "mshidkmdf"
 
 ; ------------- non-localizable strings
-Configuration          = "SYSTEM\TOUCH\SETTINGS"
+Configuration          = "Settings"
 FFConfiguration        = "SYSTEM\TOUCH\SETTINGS\FF"
 ScreenProps            = "SYSTEM\TOUCH\SCREENPROPERTIES"
 DisplaySize            = "SYSTEM\TOUCH\DISPLAYPROPERTIES"
