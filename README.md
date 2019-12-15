@@ -8,8 +8,6 @@ This pack is a work in progress and may be getting updates at a later time.
 
 [Forum](https://woaproject.net)
 
-[WOA Deployer](https://github.com/WOA-Project/WOA-Deployer-Lumia)
-
 [WPInternals](http://wpinternals.net)
 
 ## Copyright, License, Disclaimers and end user license agreement
